@@ -1,0 +1,78 @@
+    /* Animation fade in de la section story */
+
+.story {
+    animation: animateTop 2s;
+
+        &__article p {
+            animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */
+        
+        }
+
+        &__place p {
+            animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */
+
+        }
+}
+
+
+
+    /* Fleurs qui tournent */
+
+    .story{
+        &__titre{
+            &::after{
+                animation: spin 20s linear infinite ;
+                /* donner la L et H exact de la fleur pour que la rotation soit bien centrée */
+                width: 155px;
+                height: 154px;
+            }
+        }
+        &__article{
+            &::after{
+                animation: spin 20s linear infinite;   
+            }
+        }
+    }
+    
+    
+    
+     @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }      
+
+
+      /* Animation titre au scroll */
+
+    .story{
+        &__titre  {
+            &__animation{
+            animation: animateTitre 1s ease-in-out;
+            }
+        }
+      }
+/*
+      .hidden {
+        opacity: 0;
+      }*/
+
+      @keyframes animateTitre {
+        0% {
+            transform: translateY(40px);
+            opacity: 0;
+        }
+    
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+     }
+
+
+     .story-span{
+        display: block;
+     }

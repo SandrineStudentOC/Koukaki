@@ -7,3 +7,49 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
+
+
+@import "section-banner.scss";
+@import "section-story.scss";
+@import "section-studio.scss";
+@import "footer.scss";
+
+
+/* STYLE GENERAL */
+
+
+    .site-main {
+        overflow: hidden;
+    }
+
+
+/* KEYFRAMES */
+
+
+
+ @keyframes animateBottom {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+ }
+
+
+
+ @keyframes animateTop {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+ }
+

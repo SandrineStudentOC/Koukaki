@@ -2,7 +2,12 @@
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+    // importer feuille js depuis le thème enfant utiliser "get_stylesheet_directory_uri()"
+    wp_enqueue_script( 'foce-child-script', get_stylesheet_directory_uri() . '/js/script.js', array(), _S_VERSION, true );
+
 }
+
+
 
 // Get customizer options form parent theme
 if ( get_stylesheet() !== get_template() ) {

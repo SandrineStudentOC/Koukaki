@@ -8,5 +8,134 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
+.banner {
+  background-image: none;
+  position: relative;
+}
+.banner__background {
+  position: absolute;
+  width: 100% !important;
+  z-index: -2;
+  animation: animateBottom 2s;
+  margin-top: 0px !important;
+}
+.banner .banner__logo {
+  animation: animateTopLogo 2s;
+}
+
+@keyframes animateTopLogo {
+  0% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Animation fade in de la section story */
+.story {
+  animation: animateTop 2s;
+}
+.story__article p {
+  animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */
+}
+.story__place p {
+  animation: animateBottom 2s; /* Permet d'annuler l'animation du texte */
+}
+
+/* Fleurs qui tournent */
+.story__titre::after {
+  animation: spin 20s linear infinite;
+  /* donner la L et H exact de la fleur pour que la rotation soit bien centrée */
+  width: 155px;
+  height: 154px;
+}
+.story__article::after {
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Animation titre au scroll */
+.story__titre__animation {
+  animation: animateTitre 1s ease-in-out;
+}
+
+/*
+      .hidden {
+        opacity: 0;
+      }*/
+@keyframes animateTitre {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.story-span {
+  display: block;
+}
+
+.studio {
+  animation: animateTop 2s;
+}
+.studio__titre::before, .studio__titre::after {
+  animation: spin 20s linear infinite;
+}
+.studio__texte p {
+  animation: animateBottom 2s; /* Animation sens inverse, permet d'annuler l'animation du texte */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.site-footer::before, .site-footer::after {
+  animation: spin 20s linear infinite;
+}
+.site-footer__liste::after {
+  animation: spin 20s linear infinite;
+}
+
+/* STYLE GENERAL */
+.site-main {
+  overflow: hidden;
+}
+
+/* KEYFRAMES */
+@keyframes animateBottom {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animateTop {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

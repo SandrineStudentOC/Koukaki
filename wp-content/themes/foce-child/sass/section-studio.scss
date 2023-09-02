@@ -1,0 +1,25 @@
+
+.studio {
+    animation: animateTop 2s;
+
+    &__titre{
+        &::before, &::after{
+            animation: spin 20s linear infinite ;
+        }
+    }
+ 
+    &__texte p {
+     animation: animateBottom 2s; /* Animation sens inverse, permet d'annuler l'animation du texte */
+ }
+ 
+  } 
+
+
+  @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

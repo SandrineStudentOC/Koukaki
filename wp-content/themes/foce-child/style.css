@@ -20,7 +20,7 @@
   margin-top: 0px !important;
 }
 .banner .banner__logo {
-  animation: animateTopLogo 2s;
+  animation: animateTopLogo 2s, floating 3s ease-in-out 3s infinite;
 }
 
 @keyframes animateTopLogo {
@@ -33,6 +33,27 @@
     opacity: 1;
   }
 }
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.banner__video {
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 /* Animation fade in de la section story */
 .story {
   animation: animateTop 2s;
@@ -74,7 +95,7 @@
       }*/
 @keyframes animateTitre {
   0% {
-    transform: translateY(40px);
+    transform: translateY(60px);
     opacity: 0;
   }
   100% {
@@ -104,6 +125,29 @@
     transform: rotate(360deg);
   }
 }
+.oscars h3 {
+  background-image: url(./assets/images/orange_oscars_bg.png);
+  text-align: left;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-size: 2.8rem;
+  line-height: 52.5px;
+}
+
+.oscars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  /*  margin: auto;*/
+  margin-left: 11em;
+}
+
+/* 
+.oscars__logo{
+  width: 30%;
+    height: fit-content;
+}*/
 .site-footer::before, .site-footer::after {
   animation: spin 20s linear infinite;
 }

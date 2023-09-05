@@ -12,10 +12,11 @@
     }
 
     .banner__logo{
-        animation: animateTopLogo 2s
-    }
-    
+         animation: animateTopLogo 2s, floating 3s ease-in-out 3s infinite ;
+    }  
 }
+
+
 
 
  @keyframes animateTopLogo {
@@ -29,3 +30,29 @@
         opacity: 1;
     }
  }
+
+ @keyframes floating {
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-15px);
+
+    }
+
+    100%{
+        transform: translateY(0px);
+
+    }
+ }
+
+ .banner__video {
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    }

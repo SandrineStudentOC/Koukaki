@@ -7,6 +7,7 @@ get_header();
         <section class="banner">
             <!-- code ajouté / séparer logo du background pour animation -->
             <img class="banner__logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <video class="banner__video" autoplay loop muted><source src="<?php echo get_theme_file_uri() .'./assets/video/koukaki_header_video.mp4';?>" type="video/mp4"></video>
            <img class="banner__background" src="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?> " alt="background Fleurs d'oranger & chats errants">
         </section>
         <section id="#story" class="story">
@@ -68,6 +69,12 @@ get_header();
                 <p>Avec une créativité et une capacité d’innovation mondialement reconnues, une expertise éditoriale et commerciale à la pointe de son industrie, le Studio Koukaki se positionne comme un acteur incontournable dans un marché en forte croissance. Koukaki construit chaque année de véritables succès et capitalise sur de puissantes marques historiques. Cette année, il vous présente “Fleurs d’oranger et chats errants”.</p>
             </div>
             </section>
+
+        <section class="oscars">
+            <h3>Fleurs d’oranger & chats errants <br>est nominé aux Oscars Short<br> Film Animated de 2022 !</h3>
+            <img class="oscars__logo" src="<?php echo get_theme_file_uri() . './assets/images/logo_oscars_transp.png'; ?> " alt="logo oscars">
+        </section>
+
     </main><!-- #main -->
 
 <?php
